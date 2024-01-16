@@ -109,11 +109,13 @@ android {
     flavorDimensions "market"
     productFlavors {
         play {
+            manifestPlaceholders
             dimension "market"
             manifestPlaceholders["APP_CHANNEL"] = "play.google.com"
             versionNameSuffix '-play'
         }
         normal {
+            manifestPlaceholders
             dimension "market"
             manifestPlaceholders["APP_CHANNEL"] = "normal"
         }
@@ -150,7 +152,7 @@ dependencies {
 
     implementation 'androidx.transition:transition:1.4.1'
 
-    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.9.2'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:5.0.0-alpha.3'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
@@ -167,7 +169,7 @@ dependencies {
     implementation "nz.bradcampbell:paperparcel-api:2.0.8"
     kapt 'nz.bradcampbell:paperparcel-compiler:2.0.8'
 
-    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.16.0'
 
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation 'org.greenrobot:greendao:3.3.0'
